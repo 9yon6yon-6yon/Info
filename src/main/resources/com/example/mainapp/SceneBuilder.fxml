@@ -168,6 +168,27 @@
             </stroke>
          </Circle>
          <Circle disable="true" fill="#702bf0bf" layoutX="50.0" layoutY="436.0" opacity="0.53" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+         <Label fx:id="errorMassege" alignment="CENTER" cacheShape="false" disable="true" focusTraversable="false" layoutX="172.0" layoutY="436.0" textAlignment="JUSTIFY" underline="true" wrapText="true">
+            <font>
+               <Font name="DejaVuMathTeXGyre-Regular" size="18.0" />
+            </font>
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0" startX="0.15714285714285714">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="1.0" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="0.9342105388641357" green="0.9186403751373291" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill>
+         </Label>
       </children>
    </Pane>
    <Label alignment="CENTER" cacheShape="false" contentDisplay="CENTER" disable="true" opacity="0.49" prefHeight="14.0" prefWidth="294.0" text="Powered by @9yon6yon-6yon" textFill="#252261">
@@ -175,4 +196,5 @@
          <Glow level="0.13" />
       </effect>
    </Label>
+   <Label text="Label" />
 </VBox>
