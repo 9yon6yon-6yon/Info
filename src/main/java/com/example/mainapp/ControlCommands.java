@@ -2,6 +2,7 @@ package com.example.mainapp;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 
@@ -17,6 +18,8 @@ public class ControlCommands {
     private TextField id;
     @FXML
     private TextField mailaddress;
+    @FXML
+    private Label errorMassege;
 
     public void InfoInFile() throws IOException {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("Informations/info.txt", true));
@@ -25,12 +28,16 @@ public class ControlCommands {
         name = nameField.getText();
         idNo = id.getText();
         mail = mailaddress.getText();
-        printWriter.append(name).append("___").append(idNo).append("___").append(mail).append("\n");
-        bufferedWriter.close();
-        printWriter.close();
-        nameField.setText("");
-        id.setText("");
-        mailaddress.setText("");
+        if (name == null || name.length() == 0 || idNo == null || idNo.length() == 0 || mail == null || mail.length() == 0) {
+            errorMassege.setText("Enter a Valid Input");
+        } else {
+            printWriter.append(name).append("___").append(idNo).append("___").append(mail).append("\n");
+            bufferedWriter.close();
+            printWriter.close();
+            nameField.setText("");
+            id.setText("");
+            mailaddress.setText("");
+        }
     }
 
     public void EnterKeyPressed(KeyEvent keyEvent) throws IOException {
