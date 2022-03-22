@@ -196,5 +196,4 @@
          <Glow level="0.13" />
       </effect>
    </Label>
-   <Label text="Label" />
 </VBox>
